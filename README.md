@@ -56,7 +56,7 @@ Widget build(BuildContext context) {
             svgString: document != null ? document.toString() : "");
 }
 ```
-```
+```dart
 SvgImage(svgString: """
             <svg width="320" height="60" xmlns="http://www.w3.org/2000/svg">
   <!-- Left Button -->
