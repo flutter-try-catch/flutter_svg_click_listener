@@ -56,7 +56,26 @@ Widget build(BuildContext context) {
             svgString: document != null ? document.toString() : "");
 }
 ```
+```dart
+SvgImage(svgString: """
+            <svg width="320" height="60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left Button -->
+  <rect onclick='onClick.postMessage("leftButton");' id="leftButton" x="0" y="0" width="150" height="50" rx="10" ry="10" fill="#4CAF50" />
+  <text x="75" y="30" font-family="Arial" font-size="16" fill="white" text-anchor="middle" alignment-baseline="middle">
+    Left
+  </text>
 
+  <!-- Right Button -->
+  <rect onclick='onClick.postMessage("rightButton");' id="rightButton" x="170" y="0" width="150" height="50" rx="10" ry="10" fill="#2196F3" />
+  <text x="245" y="30" font-family="Arial" font-size="16" fill="white" text-anchor="middle" alignment-baseline="middle">
+    Right
+  </text>
+</svg>
+
+            """, onElementClick: (event) {
+                print("Event===>$event");
+              },),
+```
 ## Example
 
 More examples can be found in `/example` folder on [GitHub][animated_svg_github_link]. 
